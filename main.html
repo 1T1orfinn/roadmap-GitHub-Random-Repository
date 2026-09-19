@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>GitHub Random Repository Explorer</h1>
+    
+    <div id="container">
+        <select id="languageSelector">
+            <option value="" disabled selected>Select a programming language</option>
+            <option value="cpp">C++</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+            <option value="go">Go</option>
+        </select>
+
+        <div id="empty" class="box">
+            Select a language to start exploring repositories.
+        </div>
+        <div id="loading" class="hidden box">Loading...</div>
+        <div id="error" class="hidden box">Error occurred while fetching repository data.
+            <button id="retryButton">Retry</button>
+        </div>
+        
+        <div id="repoinfo" class="hidden box main-box">
+            <h2 id="repo-name"></h2>
+            <p id="repo-description"></p>
+            <div id="repo-stats">
+                <span id="repo-stars"></span>
+                <span id="repo-forks"></span>
+                <span id="repo-issues"></span>
+            </div>
+            <button id="refreshButton"> Refresh</button>
+        </div>
+    </div>
+
+    <script src="omnitrix.js"></script>
+</body>
+</html>
